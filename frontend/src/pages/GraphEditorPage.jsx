@@ -45,16 +45,16 @@ const GraphEditorPage = () => {
 
   // Run Dijkstra
   const runDijkstra = async () => {
-    if (!source || (mode === "single" && !target)) {
+    if (!source || (mode === "single" && !target)) {  //
       alert("Please select source and target (if single mode)");
       return;
     }
 
-    const formattedEdges = edges.map((e) => [e.source, e.target, parseInt(e.label)]);
+    const formattedEdges = edges.map((e) => [e.source, e.target, parseInt(e.label)]);  //  
     const nodeIds = nodes.map((n) => n.id);
 
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/dijkstra`, {
+      const res = await axios.post(`${API_BASE_URL}/api/dijkstra`, { //
         nodes: nodeIds,
         edges: formattedEdges,
         source,
