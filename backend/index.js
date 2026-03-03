@@ -37,7 +37,7 @@ connectDB();
 
 // if want to use mulltiple cors origins
 const allowedOrigins = [
-    'http://localhost:5173',
+     'http://localhost:5173',
     'https://graph-visualizer-frontend.onrender.com' // Add your production frontend URL here
 ];
 
